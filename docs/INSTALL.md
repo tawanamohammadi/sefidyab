@@ -18,7 +18,7 @@
 #### ۲. نصب سفید یاب
 روی لینک زیر کلیک کنید:
 
-👉 **[نصب مستقیم](https://raw.githubusercontent.com/tawanamohammadi/sefidyab/main/sefidyab. user.js)**
+👉 **[نصب مستقیم](https://raw.githubusercontent.com/tawanamohammadi/sefidyab/main/sefidyab.user.js)**
 
 #### ۳.  تأیید نصب
 در پنجره باز شده روی **Install** کلیک کنید. 
@@ -48,7 +48,7 @@
 #### 2. Install Sefid Yab
 Click the link below:
 
-👉 **[Direct Install](https://raw. githubusercontent.com/tawanamohammadi/sefidyab/main/sefidyab. user.js)**
+👉 **[Direct Install](https://raw.githubusercontent.com/tawanamohammadi/sefidyab/main/sefidyab.user.js)**
 
 #### 3.  Confirm Installation
 Click **Install** in the popup window.
