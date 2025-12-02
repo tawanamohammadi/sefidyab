@@ -81,7 +81,7 @@
             direction: rtl;
         }
         
-        . container {
+        .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
@@ -93,7 +93,7 @@
             padding: 60px 20px;
         }
         
-        . logo {
+        .logo {
             font-size: 64px;
             margin-bottom: 20px;
         }
@@ -130,7 +130,7 @@
             color: white;
         }
         
-        . btn-secondary {
+        .btn-secondary {
             background: transparent;
             border: 2px solid var(--primary);
             color: var(--primary);
@@ -167,15 +167,15 @@
             margin-bottom: 20px;
         }
         
-        . feature-card h3 {
+        .feature-card h3 {
             font-size: 22px;
             margin-bottom: 10px;
             color: var(--primary);
         }
         
-        . feature-card p {
+        .feature-card p {
             opacity: 0.8;
-            line-height: 1. 6;
+            line-height: 1.6;
         }
         
         /* Stats */
@@ -215,7 +215,7 @@
             text-decoration: none;
         }
         
-        . social-links {
+        .social-links {
             margin: 20px 0;
         }
         
@@ -234,6 +234,152 @@
             border-radius: 20px;
             cursor: pointer;
         }
+        
+        /* Install Section */
+        #install-section {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        #install-section h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--success));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .install-step {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s;
+        }
+        
+        .install-step:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .install-step h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        .install-step p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+        
+        .browser-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .btn-chrome {
+            background: linear-gradient(135deg, #4285f4, #1a73e8);
+            color: white;
+        }
+        
+        .btn-firefox {
+            background: linear-gradient(135deg, #ff9500, #ff6611);
+            color: white;
+        }
+        
+        .btn-edge {
+            background: linear-gradient(135deg, #0078d7, #005a9e);
+            color: white;
+        }
+        
+        .btn-install {
+            background: linear-gradient(135deg, var(--success), #00a06a);
+            color: white;
+        }
+        
+        .btn-large {
+            font-size: 20px;
+            padding: 20px 40px;
+            display: block;
+            text-align: center;
+            margin: 20px auto;
+            max-width: 400px;
+        }
+        
+        .note {
+            font-size: 14px;
+            opacity: 0.7;
+            text-align: center;
+            font-style: italic;
+            margin-top: 15px;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 32px;
+            }
+            
+            .tagline {
+                font-size: 16px;
+            }
+            
+            .btn {
+                padding: 12px 24px;
+                font-size: 16px;
+                margin: 5px;
+            }
+            
+            .btn-large {
+                font-size: 18px;
+                padding: 16px 32px;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                padding: 30px 20px;
+            }
+            
+            .stats {
+                gap: 30px;
+                padding: 20px;
+            }
+            
+            .stat-number {
+                font-size: 36px;
+            }
+            
+            .browser-buttons {
+                flex-direction: column;
+            }
+            
+            .browser-buttons .btn {
+                width: 100%;
+            }
+            
+            #install-section h2 {
+                font-size: 28px;
+            }
+            
+            .install-step {
+                padding: 20px;
+            }
+            
+            .install-step h3 {
+                font-size: 20px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -245,14 +391,52 @@
             <h1>سفید یاب | Sefid Yab</h1>
             <p class="tagline">شفافیت در فضای مجازی | Transparency in Cyberspace</p>
             <div>
-                <a href="https://raw.githubusercontent.com/tawanamohammadi/sefidyab/main/sefidyab.user.js" class="btn btn-primary">
-                    📥 نصب رایگان
+                <a href="#install-section" class="btn btn-primary">
+                    📥 نصب رایگان | Free Install
                 </a>
                 <a href="https://github.com/tawanamohammadi/sefidyab" class="btn btn-secondary">
                     ⭐ GitHub
                 </a>
             </div>
         </header>
+        
+        <!-- Install Section -->
+        <div id="install-section">
+            <h2>🚀 نصب | Installation</h2>
+            
+            <!-- Step 1: Tampermonkey -->
+            <div class="install-step">
+                <h3>مرحله ۱: نصب Tampermonkey</h3>
+                <p>ابتدا افزونه Tampermonkey را نصب کنید:</p>
+                <div class="browser-buttons">
+                    <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo" target="_blank" class="btn btn-chrome">
+                        🌐 Chrome
+                    </a>
+                    <a href="https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/" target="_blank" class="btn btn-firefox">
+                        🦊 Firefox
+                    </a>
+                    <a href="https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd" target="_blank" class="btn btn-edge">
+                        📘 Edge
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Step 2: Install Script -->
+            <div class="install-step">
+                <h3>مرحله ۲: نصب سفید یاب</h3>
+                <p>بعد از نصب Tampermonkey، روی دکمه زیر کلیک کنید:</p>
+                <a href="https://raw.githubusercontent.com/tawanamohammadi/sefidyab/main/sefidyab.user.js" class="btn btn-install btn-large">
+                    ⬇️ نصب سفید یاب | Install Sefid Yab
+                </a>
+                <p class="note">💡 Tampermonkey به طور خودکار پنجره نصب را باز میکند</p>
+            </div>
+            
+            <!-- Step 3: Use -->
+            <div class="install-step">
+                <h3>مرحله ۳: استفاده</h3>
+                <p>به <a href="https://x.com" target="_blank">X.com</a> بروید و از سفید یاب استفاده کنید!</p>
+            </div>
+        </div>
         
         <section class="features">
             <div class="feature-card">
