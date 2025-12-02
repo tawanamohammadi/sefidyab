@@ -11,7 +11,7 @@
 // @grant        GM_addStyle
 // @run-at       document-idle
 // @license      GPL-3.0
-// @homepage     https://github. com/tawanamohammadi/sefidyab
+// @homepage     https://github.com/tawanamohammadi/sefidyab
 // @supportURL   https://github.com/tawanamohammadi/sefidyab/issues
 // @downloadURL  https://raw.githubusercontent.com/tawanamohammadi/sefidyab/main/sefidyab.user.js
 // @updateURL    https://raw.githubusercontent.com/tawanamohammadi/sefidyab/main/sefidyab.user.js
@@ -23,9 +23,9 @@
  * 
  * @author Tawana Mohammadi
  * @website https://tawana.online
- * @email info@tawana. online
+ * @email info@tawana.online
  * @orcid 0009-0005-6825-6728
- * @doi 10.6084/m9. figshare.30758297
+ * @doi 10.6084/m9.figshare.30758297
  */
 
 (function() {
@@ -58,7 +58,7 @@
             title: 'سفید یاب',
             tagline: 'شفافیت در فضای مجازی',
             scan: 'اسکن',
-            scanning: 'در حال اسکن.. .',
+            scanning: 'در حال اسکن...',
             export: 'خروجی',
             settings: 'تنظیمات',
             status: {
@@ -74,7 +74,7 @@
             title: 'Sefid Yab',
             tagline: 'Transparency in Cyberspace',
             scan: 'Scan',
-            scanning: 'Scanning.. .',
+            scanning: 'Scanning...',
             export: 'Export',
             settings: 'Settings',
             status: {
@@ -93,7 +93,7 @@
         const keys = key.split('.');
         let value = LANG[currentLang];
         for (const k of keys) {
-            value = value? .[k];
+            value = value?.[k];
         }
         return value || key;
     };
@@ -107,17 +107,17 @@
             top: 80px;
             right: 20px;
             width: 320px;
-            background: ${CONFIG.COLORS. dark};
+            background: ${CONFIG.COLORS.dark};
             border-radius: 16px;
             box-shadow: 0 8px 32px rgba(0,0,0,0.4);
             z-index: 9999;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            color: ${CONFIG. COLORS.light};
+            color: ${CONFIG.COLORS.light};
             direction: rtl;
         }
         
         #sefidyab-header {
-            background: linear-gradient(135deg, ${CONFIG. COLORS.primary}, ${CONFIG.COLORS. warning});
+            background: linear-gradient(135deg, ${CONFIG.COLORS.primary}, ${CONFIG.COLORS.warning});
             padding: 16px;
             border-radius: 16px 16px 0 0;
             text-align: center;
@@ -141,8 +141,8 @@
             overflow-y: auto;
         }
         
-        . sefidyab-btn {
-            background: ${CONFIG. COLORS.primary};
+        .sefidyab-btn {
+            background: ${CONFIG.COLORS.primary};
             color: white;
             border: none;
             padding: 10px 20px;
@@ -159,9 +159,9 @@
             box-shadow: 0 4px 12px rgba(29,155,240,0.4);
         }
         
-        .sefidyab-btn. warning { background: ${CONFIG. COLORS.warning}; }
-        . sefidyab-btn.success { background: ${CONFIG. COLORS.success}; }
-        . sefidyab-btn.danger { background: ${CONFIG. COLORS.danger}; }
+        .sefidyab-btn.warning { background: ${CONFIG.COLORS.warning}; }
+        .sefidyab-btn.success { background: ${CONFIG.COLORS.success}; }
+        .sefidyab-btn.danger { background: ${CONFIG.COLORS.danger}; }
         
         .sefidyab-user-card {
             background: rgba(255,255,255,0.1);
@@ -170,9 +170,9 @@
             margin: 8px 0;
         }
         
-        .sefidyab-user-card . username {
+        .sefidyab-user-card .username {
             font-weight: 600;
-            color: ${CONFIG.COLORS. primary};
+            color: ${CONFIG.COLORS.primary};
         }
         
         .sefidyab-user-card .status {
@@ -193,13 +193,13 @@
             text-align: center;
         }
         
-        .sefidyab-stat . number {
+        .sefidyab-stat .number {
             font-size: 24px;
             font-weight: 700;
-            color: ${CONFIG. COLORS.primary};
+            color: ${CONFIG.COLORS.primary};
         }
         
-        .sefidyab-stat . label {
+        .sefidyab-stat .label {
             font-size: 10px;
             opacity: 0.7;
         }
@@ -210,7 +210,7 @@
             right: 20px;
             width: 56px;
             height: 56px;
-            background: linear-gradient(135deg, ${CONFIG. COLORS.primary}, ${CONFIG.COLORS.warning});
+            background: linear-gradient(135deg, ${CONFIG.COLORS.primary}, ${CONFIG.COLORS.warning});
             border-radius: 50%;
             border: none;
             cursor: pointer;
@@ -238,14 +238,14 @@
             }
         },
         set: (data) => {
-            GM_setValue(CONFIG. STORAGE_KEY, JSON.stringify(data));
+            GM_setValue(CONFIG.STORAGE_KEY, JSON.stringify(data));
         },
         addUser: (user) => {
             const data = Storage.get();
             if (!data.users) data.users = [];
-            const exists = data.users. find(u => u. username === user.username);
-            if (! exists) {
-                data.users.push({ ... user, addedAt: new Date().toISOString() });
+            const exists = data.users.find(u => u.username === user.username);
+            if (!exists) {
+                data.users.push({...user, addedAt: new Date().toISOString()});
                 Storage.set(data);
             }
         },
@@ -264,10 +264,10 @@
             
             userLinks.forEach(link => {
                 const href = link.getAttribute('href');
-                if (href && href. match(/^\/[a-zA-Z0-9_]+$/) && !href. includes('/')) {
+                if (href && href.match(/^\/[a-zA-Z0-9_]+$/) && !href.includes('/')) {
                     const username = href.substring(1);
-                    if (! users.find(u => u. username === username)) {
-                        users. push({
+                    if (!users.find(u => u.username === username)) {
+                        users.push({
                             username,
                             displayName: link.textContent || username,
                             profileUrl: `https://x.com${href}`
@@ -284,7 +284,7 @@
             const statuses = ['shield', 'safe', 'anomaly', 'hidden'];
             const randomStatus = statuses[Math.floor(Math.random() * statuses.length)];
             return {
-                ... user,
+                ...user,
                 status: randomStatus,
                 analyzedAt: new Date().toISOString()
             };
@@ -320,16 +320,16 @@
             GM_addStyle(STYLES);
             UI.createToggleButton();
             UI.createDashboard();
-            UI. updateStats();
+            UI.updateStats();
         },
         
         createToggleButton: () => {
             const btn = document.createElement('button');
             btn.id = 'sefidyab-toggle';
-            btn. innerHTML = '🔍';
-            btn. title = t('title');
+            btn.innerHTML = '🔍';
+            btn.title = t('title');
             btn.onclick = UI.toggle;
-            document. body.appendChild(btn);
+            document.body.appendChild(btn);
         },
         
         createDashboard: () => {
@@ -362,7 +362,7 @@
                     <div id="sefidyab-users"></div>
                 </div>
             `;
-            document. body.appendChild(dashboard);
+            document.body.appendChild(dashboard);
             UI.dashboard = dashboard;
             
             document.getElementById('btn-scan').onclick = Scanner.scan;
@@ -371,7 +371,7 @@
         
         toggle: () => {
             UI.isVisible = !UI.isVisible;
-            UI.dashboard.style.display = UI.isVisible ?  'block' : 'none';
+            UI.dashboard.style.display = UI.isVisible ? 'block' : 'none';
         },
         
         updateScanButton: (scanning) => {
@@ -384,7 +384,7 @@
             const users = Storage.getUsers();
             document.getElementById('stat-total').textContent = users.length;
             document.getElementById('stat-anomaly').textContent = users.filter(u => u.status === 'anomaly' || u.status === 'hidden').length;
-            document. getElementById('stat-safe').textContent = users.filter(u => u.status === 'safe' || u.status === 'shield').length;
+            document.getElementById('stat-safe').textContent = users.filter(u => u.status === 'safe' || u.status === 'shield').length;
         },
         
         renderUsers: (users) => {
@@ -407,12 +407,12 @@
                 users
             };
             
-            const blob = new Blob([JSON. stringify(data, null, 2)], { type: 'application/json' });
+            const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
             const url = URL.createObjectURL(blob);
-            const a = document. createElement('a');
+            const a = document.createElement('a');
             a.href = url;
             a.download = `sefidyab-export-${Date.now()}.json`;
-            a. click();
+            a.click();
             URL.revokeObjectURL(url);
         }
     };
