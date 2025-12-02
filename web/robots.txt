@@ -1,0 +1,7 @@
+# robots.txt for Sefid Yab
+# Author: Tawana Mohammadi (https://tawana.online)
+
+User-agent: *
+Allow: /
+
+Sitemap: https://tawanamohammadi.github.io/sefidyab/sitemap.xml
